@@ -5,7 +5,7 @@ import re
 # ==========================================
 # CẤU HÌNH TRANG VÀ CSS
 # ==========================================
-st.set_page_config(page_title="Trang Đọc Truyện", page_icon="📖", layout="centered")
+st.set_page_config(page_title="TRANG ĐỌC TRUYỆN", page_icon="📖", layout="centered")
 
 # CSS tối ưu cho mobile và mắt (chế độ Sepia dịu mắt)
 custom_css = """
@@ -119,10 +119,10 @@ if 'selected_chapter' not in st.session_state:
 # GIAO DIỆN THANH BÊN (SIDEBAR)
 # ==========================================
 with st.sidebar:
-    st.title("📚 Điều Hướng")
+    st.title("📚 ĐIỀU HƯỚNG")
     
     # Nút về trang chủ
-    if st.button("🏠 Về Trang Chủ", use_container_width=True):
+    if st.button("🏠 Về trang chủ", use_container_width=True):
         st.session_state.current_view = 'home'
         st.session_state.selected_novel = None
         st.rerun()
@@ -184,7 +184,7 @@ with st.sidebar:
 # GIAO DIỆN CHÍNH
 # ==========================================
 if st.session_state.current_view == 'home':
-    st.title("Trang Chủ Truyện 📖")
+    st.title("TRANG CHỦ TRUYỆN 📖")
     
     all_nvs = get_all_novels()
     if not all_nvs:
